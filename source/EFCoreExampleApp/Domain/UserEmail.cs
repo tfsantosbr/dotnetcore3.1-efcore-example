@@ -6,10 +6,8 @@ namespace EFCoreExampleApp.Domain
 {
     public class UserEmail
     {
-        public UserEmail(int id, int userId, Email email)
+        public UserEmail(Email email)
         {
-            Id = id;
-            UserId = userId;
             Email = email;
         }
 

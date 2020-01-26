@@ -7,10 +7,9 @@ namespace EFCoreExampleApp.Domain
     {
         private readonly List<UserEmail> _emails = new List<UserEmail>();
 
-        public User(CompleteName completeName, Email email, Cpf cpf)
+        public User(CompleteName completeName, Cpf cpf)
         {
             CompleteName = completeName;
-            Email = email;
             Cpf = cpf;
         }
 
@@ -20,7 +19,6 @@ namespace EFCoreExampleApp.Domain
 
         public int Id { get; private set; }
         public CompleteName CompleteName { get; private set; }
-        public Email Email { get; private set; }
         public Cpf Cpf { get; private set; }
         public IReadOnlyCollection<UserEmail> Emails => _emails.AsReadOnly();
 
